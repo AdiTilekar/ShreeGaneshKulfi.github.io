@@ -2,6 +2,10 @@
 // App-wide constants — Ganesh Kulfi Web
 // ============================================================
 
+/** Base path for GitHub Pages deployment (empty in dev) */
+export const BASE_PATH =
+  process.env.NODE_ENV === 'production' ? '/ShreeGaneshKulfi.github.io' : '';
+
 export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
 
@@ -58,18 +62,18 @@ export const TIER_MAP: Record<
 
 /** Kulfi flavor image mapping (local assets in /public/images/flavors/) */
 export const FLAVOR_IMAGES: Record<string, string> = {
-  'Mango Kulfi':       '/images/flavors/mango_kulfi.png',
-  'Rabdi Kulfi':       '/images/flavors/rabdi_kulfi.png',
-  'Dry Fruit Kulfi':   '/images/flavors/dry_fruit_kulfi.png',
-  'Chocolate Kulfi':   '/images/flavors/chocolate_kulfi.png',
-  'Paan Kulfi':        '/images/flavors/paan_kulfi.png',
-  'Strawberry Kulfi':  '/images/flavors/strawberry_kulfi.png',
-  'Sitafal Kulfi':     '/images/flavors/sitafal_kulfi.png',
-  'Gulkand Kulfi':     '/images/flavors/gulkand_kulfi.png',
-  'Pineapple Kulfi':   '/images/flavors/pineapple_kulfi.png',
-  'Guava Kulfi':       '/images/flavors/guava_kulfi.png',
-  'Jamun Kulfi':       '/images/flavors/jamun_kulfi.png',
-  'Chikoo Kulfi':      '/images/flavors/chikoo_kulfi.png',
-  'Fig Kulfi':         '/images/flavors/fig_kulfi.png',
-  'Cut Kulfi':         '/images/flavors/cut_kulfi.png',
+  'Mango Kulfi':       `${BASE_PATH}/images/flavors/mango_kulfi.png`,
+  'Rabdi Kulfi':       `${BASE_PATH}/images/flavors/rabdi_kulfi.png`,
+  'Dry Fruit Kulfi':   `${BASE_PATH}/images/flavors/dry_fruit_kulfi.png`,
+  'Chocolate Kulfi':   `${BASE_PATH}/images/flavors/chocolate_kulfi.png`,
+  'Paan Kulfi':        `${BASE_PATH}/images/flavors/paan_kulfi.png`,
+  'Strawberry Kulfi':  `${BASE_PATH}/images/flavors/strawberry_kulfi.png`,
+  'Sitafal Kulfi':     `${BASE_PATH}/images/flavors/sitafal_kulfi.png`,
+  'Gulkand Kulfi':     `${BASE_PATH}/images/flavors/gulkand_kulfi.png`,
+  'Pineapple Kulfi':   `${BASE_PATH}/images/flavors/pineapple_kulfi.png`,
+  'Guava Kulfi':       `${BASE_PATH}/images/flavors/guava_kulfi.png`,
+  'Jamun Kulfi':       `${BASE_PATH}/images/flavors/jamun_kulfi.png`,
+  'Chikoo Kulfi':      `${BASE_PATH}/images/flavors/chikoo_kulfi.png`,
+  'Fig Kulfi':         `${BASE_PATH}/images/flavors/fig_kulfi.png`,
+  'Cut Kulfi':         `${BASE_PATH}/images/flavors/cut_kulfi.png`,
 };

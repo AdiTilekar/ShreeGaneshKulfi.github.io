@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
+  basePath: isProd ? '/ShreeGaneshKulfi.github.io' : '',
+  assetPrefix: isProd ? '/ShreeGaneshKulfi.github.io/' : '',
   reactStrictMode: true,
   poweredByHeader: false,
   images: {

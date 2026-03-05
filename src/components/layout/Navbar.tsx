@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { usePublicCart } from '@/stores/usePublicCart';
-import { SITE_NAME } from '@/utils/constants';
+import { SITE_NAME, BASE_PATH } from '@/utils/constants';
 import { useTheme } from '@/hooks/useTheme';
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <img src="/images/logo.png" alt="Ganesh Kulfi" className="h-9 w-9 rounded-full object-cover" />
+          <img src={`${BASE_PATH}/images/logo.png`} alt="Ganesh Kulfi" className="h-9 w-9 rounded-full object-cover" />
           <span className="font-display font-bold text-lg text-gray-900 dark:text-white hidden sm:inline">
             {SITE_NAME}
           </span>

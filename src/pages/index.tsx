@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import SeoLayout from '@/components/layout/SeoLayout';
 import QuantityModal from '@/components/ui/QuantityModal';
-import { FLAVOR_IMAGES } from '@/utils/constants';
+import { FLAVOR_IMAGES, BASE_PATH } from '@/utils/constants';
 import type { Product } from '@/types';
 
 interface HomeProps {
@@ -75,9 +75,9 @@ function Counter({ end, suffix = '', duration = 2000 }: { end: number; suffix?: 
 
 /* ── Data ───────────────────────────────────────────────────── */
 const BEST_SELLERS = [
-  { name: 'Mango Kulfi', tagline: 'Our #1 Bestseller', badge: 'Most Loved', img: '/images/flavors/mango_kulfi.png' },
-  { name: 'Dry Fruit Kulfi', tagline: 'The Royal Choice', badge: 'Premium', img: '/images/flavors/dry_fruit_kulfi.png' },
-  { name: 'Paan Kulfi', tagline: 'The Desi Classic', badge: 'Trending', img: '/images/flavors/paan_kulfi.png' },
+  { name: 'Mango Kulfi', tagline: 'Our #1 Bestseller', badge: 'Most Loved', img: `${BASE_PATH}/images/flavors/mango_kulfi.png` },
+  { name: 'Dry Fruit Kulfi', tagline: 'The Royal Choice', badge: 'Premium', img: `${BASE_PATH}/images/flavors/dry_fruit_kulfi.png` },
+  { name: 'Paan Kulfi', tagline: 'The Desi Classic', badge: 'Trending', img: `${BASE_PATH}/images/flavors/paan_kulfi.png` },
 ];
 
 const TESTIMONIALS = [
@@ -169,23 +169,23 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
             <div className="relative hidden lg:block">
               <div className="relative z-10">
                 <img
-                  src="/images/flavors/mango_kulfi.png"
+                  src={`${BASE_PATH}/images/flavors/mango_kulfi.png`}
                   alt="Mango Kulfi — Our Bestseller"
                   className="w-full max-w-md mx-auto rounded-3xl shadow-2xl shadow-amber-900/20 dark:shadow-black/40 ring-1 ring-black/5 dark:ring-white/10 animate-float"
                 />
               </div>
               {/* Floating satellite kulfis */}
               <div className="absolute -top-8 -left-4 w-36 h-36 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 dark:ring-white/10 rotate-[-6deg] hover:rotate-0 transition-transform duration-500">
-                <img src="/images/flavors/paan_kulfi.png" alt="Paan Kulfi" className="w-full h-full object-cover" />
+                <img src={`${BASE_PATH}/images/flavors/paan_kulfi.png`} alt="Paan Kulfi" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -left-8 w-32 h-32 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 dark:ring-white/10 rotate-[5deg] hover:rotate-0 transition-transform duration-500">
-                <img src="/images/flavors/strawberry_kulfi.png" alt="Strawberry Kulfi" className="w-full h-full object-cover" />
+                <img src={`${BASE_PATH}/images/flavors/strawberry_kulfi.png`} alt="Strawberry Kulfi" className="w-full h-full object-cover" />
               </div>
               <div className="absolute top-12 -right-6 w-28 h-28 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 dark:ring-white/10 rotate-[8deg] hover:rotate-0 transition-transform duration-500">
-                <img src="/images/flavors/dry_fruit_kulfi.png" alt="Dry Fruit Kulfi" className="w-full h-full object-cover" />
+                <img src={`${BASE_PATH}/images/flavors/dry_fruit_kulfi.png`} alt="Dry Fruit Kulfi" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-8 right-8 w-32 h-32 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 dark:ring-white/10 rotate-[-4deg] hover:rotate-0 transition-transform duration-500">
-                <img src="/images/flavors/chocolate_kulfi.png" alt="Chocolate Kulfi" className="w-full h-full object-cover" />
+                <img src={`${BASE_PATH}/images/flavors/chocolate_kulfi.png`} alt="Chocolate Kulfi" className="w-full h-full object-cover" />
               </div>
               {/* Badge */}
               <div className="absolute bottom-16 -left-12 bg-white dark:bg-gray-900 rounded-2xl px-5 py-4 shadow-xl ring-1 ring-black/5 dark:ring-white/10 z-20">
@@ -384,18 +384,18 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-amber-500/40 transition-all duration-500 group">
-                      <img src="/images/flavors/mango_kulfi.png" alt="Mango Kulfi" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                      <img src={`${BASE_PATH}/images/flavors/mango_kulfi.png`} alt="Mango Kulfi" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                     </div>
                     <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-amber-500/40 transition-all duration-500 group">
-                      <img src="/images/flavors/gulkand_kulfi.png" alt="Gulkand Kulfi" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                      <img src={`${BASE_PATH}/images/flavors/gulkand_kulfi.png`} alt="Gulkand Kulfi" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                     </div>
                   </div>
                   <div className="space-y-4 pt-10">
                     <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-amber-500/40 transition-all duration-500 group">
-                      <img src="/images/flavors/dry_fruit_kulfi.png" alt="Dry Fruit Kulfi" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                      <img src={`${BASE_PATH}/images/flavors/dry_fruit_kulfi.png`} alt="Dry Fruit Kulfi" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                     </div>
                     <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 hover:ring-amber-500/40 transition-all duration-500 group">
-                      <img src="/images/flavors/rabdi_kulfi.png" alt="Rabdi Kulfi" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                      <img src={`${BASE_PATH}/images/flavors/rabdi_kulfi.png`} alt="Rabdi Kulfi" className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
                     </div>
                   </div>
                 </div>
