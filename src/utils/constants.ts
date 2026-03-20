@@ -18,7 +18,7 @@ export const SITE_DESCRIPTION =
   'Premium handcrafted kulfi in 13+ authentic flavors. Order wholesale for your shop or enjoy our traditional recipes directly. Mango, Rabdi, Dry Fruit, and more.';
 
 export const CONTACT = {
-  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '+91-9876543210',
+  phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '7020858551',
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@ganeshkulfi.com',
 };
 

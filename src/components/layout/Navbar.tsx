@@ -2,7 +2,7 @@
 // Navbar — Responsive top navigation
 // ============================================================
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { usePublicCart } from '@/stores/usePublicCart';
@@ -13,7 +13,12 @@ export default function Navbar() {
   const router = useRouter();
   const publicCartCount = usePublicCart((s) => s.totalItems());
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { isDark, toggle } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
@@ -36,7 +41,7 @@ export default function Navbar() {
           </NavLink>
           <NavLink href="/cart" active={router.pathname === '/cart'}>
             Cart
-            {publicCartCount > 0 && (
+            {mounted && publicCartCount > 0 && (
               <span className="ml-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-600 text-white text-xs font-bold">
                 {publicCartCount}
               </span>
@@ -44,6 +49,9 @@ export default function Navbar() {
           </NavLink>
           <NavLink href="/signup" active={router.pathname === '/signup'}>
             Become a Partner
+          </NavLink>
+          <NavLink href="/career" active={router.pathname === '/career'}>
+            Careers
           </NavLink>
 
           {/* Dark mode toggle */}
@@ -96,9 +104,10 @@ export default function Navbar() {
             <MobileLink href="/" onClick={() => setMobileOpen(false)}>Home</MobileLink>
             <MobileLink href="/products" onClick={() => setMobileOpen(false)}>Products</MobileLink>
             <MobileLink href="/cart" onClick={() => setMobileOpen(false)}>
-              Cart {publicCartCount > 0 && `(${publicCartCount})`}
+              Cart {mounted && publicCartCount > 0 && `(${publicCartCount})`}
             </MobileLink>
             <MobileLink href="/signup" onClick={() => setMobileOpen(false)}>Become a Partner</MobileLink>
+            <MobileLink href="/career" onClick={() => setMobileOpen(false)}>Careers</MobileLink>
           </div>
         </div>
       )}
