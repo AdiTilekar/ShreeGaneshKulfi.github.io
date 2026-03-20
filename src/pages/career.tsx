@@ -156,14 +156,14 @@ const CareerPage: NextPage = () => {
                     rel="noopener noreferrer"
                     className="mt-5 inline-flex text-sm font-bold text-green-600 hover:text-green-700"
                   >
-                    Apply on WhatsApp ->
+                    Apply on WhatsApp &rarr;
                   </a>
                 ) : (
                   <a
                     href={`${applyMail}&body=${encodeURIComponent(`Role: ${role.title}\nLocation: ${role.location}\n\nTell us about your experience.`)}`}
                     className="mt-5 inline-flex text-sm font-bold text-amber-600 hover:text-amber-700"
                   >
-                    Apply by Email ->
+                    Apply by Email &rarr;
                   </a>
                 )}
               </article>
