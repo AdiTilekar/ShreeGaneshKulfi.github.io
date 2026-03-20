@@ -9,9 +9,17 @@ const OPEN_ROLES = [
   {
     title: 'Sales Girl / Sales Boy (Pune Division)',
     location: 'Pune Division, Maharashtra',
-    type: 'Full-time',
+    type: 'Part-time ',
     summary:
-      'Visit retail stores, build partner relationships, onboard new outlets, and grow repeat orders in Pune Division.',
+      'Physical sales job in our outlet near Atal bihari Vajpayee Sky walk, Purnanagr , Pimpri-Chinchwad -411019',
+    whatsappNumber: PUNE_DIVISION_WHATSAPP,
+  },
+  {
+    title: 'Sales Digital Marketing Intern (Pune Division)',
+    location: 'Pune Division, Maharashtra',
+    type: 'Part-time ',
+    summary:
+      'Create social content, campaign ideas, and track growth across local markets.',
     whatsappNumber: PUNE_DIVISION_WHATSAPP,
   },
   {
