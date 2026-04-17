@@ -102,7 +102,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
   return (
     <SeoLayout
       title="Home"
-      description="Premium handcrafted kulfi in 14 authentic flavors. 10 lakh+ kulfis sold. The fastest-growing kulfi brand with 100+ retail partners."
+      description="Premium handcrafted kulfi in 14 authentic flavors. 10 million+ kulfis sold. The fastest-growing kulfi brand with 350+ retail partners and 30+ franchise."
     >
       {/* ═══════════════════════════════════════════════════════════
           1. HERO — Big, bold, gradient text, floating images
@@ -131,8 +131,8 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
               </h1>
 
               <p className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
-                Trusted by <strong className="text-gray-900 dark:text-white">100+ retailers</strong> across Maharashtra.
-                Over <strong className="text-amber-600">10 Lakh+ kulfis</strong> sold and counting.
+                Trusted by <strong className="text-gray-900 dark:text-white">350+ retail partners</strong> across Maharashtra.
+                Over <strong className="text-amber-600">10 million+ kulfis</strong> sold and counting.
               </p>
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
@@ -150,9 +150,9 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
               {/* Stats row */}
               <div className="mt-12 flex items-center gap-8 sm:gap-12">
                 {[
-                  { val: '10L+', label: 'Kulfis Sold' },
-                  { val: '100+', label: 'Retail Partners' },
-                  { val: '14', label: 'Flavors' },
+                  { val: '10M+', label: 'Kulfis Sold' },
+                  { val: '350+', label: 'Retail Partners' },
+                  { val: '30+', label: 'Franchises' },
                 ].map((s, i) => (
                   <div key={s.label} className="flex items-center gap-8 sm:gap-12">
                     {i > 0 && <div className="w-px h-12 bg-gray-200 dark:bg-gray-700 -ml-8 sm:-ml-12" />}
@@ -189,7 +189,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
               </div>
               {/* Badge */}
               <div className="absolute bottom-16 -left-12 bg-white dark:bg-gray-900 rounded-2xl px-5 py-4 shadow-xl ring-1 ring-black/5 dark:ring-white/10 z-20">
-                <p className="text-2xl font-black text-amber-600 leading-none">10 Lakh+</p>
+                <p className="text-2xl font-black text-amber-600 leading-none">10 Million+</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 font-semibold mt-1">Kulfis Sold!</p>
               </div>
             </div>
@@ -235,7 +235,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                 <span className="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">Bestsellers</span>
               </h2>
               <p className="mt-4 text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
-                The flavors our 100+ retail partners can&apos;t keep in stock
+                The flavors our 350+ retail partners can&apos;t keep in stock
               </p>
             </div>
           </Reveal>
@@ -358,7 +358,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                 <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
                   Started Small.{' '}
                   <span className="text-amber-400">Growing Fast.</span>{' '}
-                  10 Lakh+ Kulfis Sold.
+                  10 Million+ Kulfis Sold.
                 </h2>
                 <div className="mt-8 space-y-6 text-gray-300 text-lg leading-relaxed">
                   <p>
@@ -369,8 +369,9 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                   <p>
                     That idea <strong className="text-white">exploded</strong>. What began as a small operation
                     quickly became the go-to kulfi brand for retailers across Maharashtra. Today we&apos;ve
-                    crossed <strong className="text-amber-400">10 lakh kulfis sold</strong>, partnered with
-                    <strong className="text-white"> 100+ retailers</strong>, and we&apos;re adding new partners every week.
+                    crossed <strong className="text-amber-400">10 million kulfis sold</strong>, partnered with
+                    <strong className="text-white"> 350+ retail partners</strong>, and expanded to
+                    <strong className="text-white"> 30+ franchise</strong> locations.
                   </p>
                   <p className="text-amber-300 font-semibold text-xl italic border-l-4 border-amber-500 pl-5">
                     &quot;We didn&apos;t inherit a legacy — we&apos;re building one. One kulfi at a time.&quot;
@@ -400,7 +401,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                   </div>
                 </div>
                 <div className="absolute -bottom-5 -left-5 bg-amber-600 text-white rounded-2xl px-7 py-5 shadow-2xl shadow-amber-600/40">
-                  <span className="block text-4xl font-black leading-none">10L+</span>
+                  <span className="block text-4xl font-black leading-none">10M+</span>
                   <span className="text-sm text-amber-100 font-semibold">Kulfis Sold</span>
                 </div>
               </div>
@@ -418,9 +419,9 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
             {[
               { value: 14, suffix: '+', label: 'Flavors', sub: 'Each one a masterpiece' },
-              { value: 100, suffix: '+', label: 'Retailers', sub: 'And growing every week' },
-              { value: 10, suffix: 'L+', label: 'Kulfis Sold', sub: 'And counting...' },
-              { value: 365, suffix: '', label: 'Days/Year', sub: 'Fresh supply, always' },
+              { value: 350, suffix: '+', label: 'Retail Partners', sub: 'And growing every week' },
+              { value: 10, suffix: 'M+', label: 'Kulfis Sold', sub: 'And counting...' },
+              { value: 30, suffix: '+', label: 'Franchises', sub: 'Expanding across markets' },
             ].map((stat, i) => (
               <Reveal key={stat.label} delay={i * 80}>
                 <div>
@@ -490,7 +491,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
                 The Ganesh Kulfi <span className="text-amber-600">Guarantee</span>
               </h2>
               <p className="mt-4 text-gray-500 dark:text-gray-400 text-lg">
-                Why 100+ retailers choose us over every other brand
+                Why 350+ retail partners choose us over every other brand
               </p>
             </div>
           </Reveal>
@@ -547,7 +548,7 @@ const Home: NextPage<HomeProps> = ({ featuredProducts }) => {
 
               <div className="relative text-center">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/90 text-sm font-semibold mb-6">
-                  JOIN 100+ HAPPY RETAILERS
+                  JOIN 350+ HAPPY RETAIL PARTNERS
                 </span>
                 <h2 className="text-4xl sm:text-6xl font-black text-white leading-tight">
                   Your Customers Are<br />

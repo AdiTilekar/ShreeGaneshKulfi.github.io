@@ -26,7 +26,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <img src={`${BASE_PATH}/images/logo.png`} alt="Ganesh Kulfi" className="h-9 w-9 rounded-full object-cover" />
-          <span className="font-display font-bold text-lg text-gray-900 dark:text-white hidden sm:inline">
+          <span className="font-display font-bold text-sm sm:text-lg text-gray-900 dark:text-white leading-tight">
             {SITE_NAME}
           </span>
         </Link>
