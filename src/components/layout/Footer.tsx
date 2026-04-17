@@ -4,7 +4,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { SITE_NAME, CONTACT } from '@/utils/constants';
+import { SITE_NAME, CONTACT, FOUNDERS } from '@/utils/constants';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -23,6 +23,21 @@ export default function Footer() {
               Authentic handcrafted kulfi, made with love and tradition. Serving retailers and customers
               across Maharashtra with 13+ irresistible flavors.
             </p>
+            <div className="mt-4 w-full rounded-xl border border-amber-500/30 bg-amber-500/10 px-3 py-2">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300 shrink-0">Founders</span>
+                <div className="flex flex-wrap items-center gap-2">
+                  {FOUNDERS.map((name) => (
+                    <span
+                      key={name}
+                      className="text-xs font-semibold text-white bg-white/10 px-2.5 py-1 rounded-lg border border-white/10"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -75,9 +90,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col lg:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <p>© {year} {SITE_NAME}. All rights reserved.</p>
           <p>Handcrafted with ❤️ in Kopargaon</p>
+          <p className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-4 py-2 text-[11px] sm:text-xs font-semibold text-amber-100">
+            <span className="text-amber-300">Designed by :-</span>
+            <a
+              href="https://algokami.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-amber-200 underline underline-offset-2 transition-colors"
+            >
+              Algokami Tech Solutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>
