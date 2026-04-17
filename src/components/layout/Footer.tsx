@@ -8,6 +8,7 @@ import { SITE_NAME, CONTACT, FOUNDERS } from '@/utils/constants';
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const puneMapUrl = 'https://maps.app.goo.gl/x5bfy65JWQrnr1mQ8?g_st=aw';
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -70,7 +71,17 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-gray-400">
-                📍 Kopargaon, Maharashtra, India
+                📍 Kopargaon & Pune, Maharashtra, India
+              </li>
+              <li>
+                <a
+                  href={puneMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-orange transition-colors"
+                >
+                  📌 Pune Location (View on Map)
+                </a>
               </li>
             </ul>
           </div>
